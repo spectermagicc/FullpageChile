@@ -1,0 +1,301 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.texto-rojo{
+    font-size: 100px;
+    color: rgb(211, 6, 6);
+}
+
+.texto-azul{
+    color: rgb(13, 13, 177);
+    font-size: 25px;
+    font-family: 'Great Vibes', cursive;
+}
+
+.texto-blanco{
+    color: white;
+    font-size: 25px;
+    font-family: 'Great Vibes', cursive;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/*Clases para fullpages*/
+
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background: black;
+    border: 1px solid white;
+    color: black;
+}
+
+#fp-nav ul li .fp-tooltip{
+    color: black;
+    font-weight: 500;
+}
+
+.fp-controlArrow.fp-next,
+.fp-controlArrow.fp-controlArrow.fp-prev{
+    display: none;
+}
+
+
+
+.fp-slidesNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+.nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 90;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.nav li,
+.nav a{
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    font-family: 'Oswald';
+    font-size: 16px;
+    color: #f2f2f2;
+    transition: .5s ease;
+}
+
+.nav li.active{border-bottom: 2px solid orange;}
+
+.menu li.active a{color: orange;} /*Color orange cuando está activada la clase .active*/
+
+.menu li:hover a{color: white;}
+
+/*Header*/
+
+.header{
+    background: url(../img/bg-prin.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.header .contenedor-titulo{
+    text-align: center;
+    position: relative;
+    z-index: 99;
+}
+
+.header .contenedor-icono{
+    position: absolute;
+    z-index: 99;
+    bottom: 3%;
+    left: 50%;
+    font-size: 40px;
+    animation: down-up 1s ease infinite;
+}
+
+
+
+/*Paijes galeria*/
+.paisajes article{
+    background-position: center;
+    background-size: cover;
+}
+
+.paisajes article:nth-child(1){
+    background-image: url(../img/1.jpg);
+}
+
+.paisajes article:nth-child(2){
+    background-image: url(../img/2.jpg);
+}
+
+.paisajes article:nth-child(3){
+    background-image: url(../img/3.jpg);
+}
+
+.paisajes article:nth-child(4){
+    background-image: url(../img/4.jpg);
+}
+
+.paisajes article:nth-child(5){
+    background-image: url(../img/5.jpg);
+}
+
+.paisajes article:nth-child(6){
+    background-image: url(../img/6.jpg);
+}
+
+.paisajes article:nth-child(7){
+    background-image: url(../img/7.jpg);
+}
+
+
+.modelo{
+    font-family: 'Open Sans';
+    font-weight: bold;
+    margin-top: 33%;
+    padding: 20px;
+    background: rgba(131, 131, 131, 0.417);
+    width: 25%;
+    margin-left: 20px;
+    box-shadow: 2px 2px 2px rgb(78, 78, 78);
+}
+
+
+.paisajes article .modelo{
+    margin-bottom: 40px;
+    width: 43%;
+    display: inline-grid;
+}
+.paisajes .informacion-paisajes .modelo .texto-negro{
+    border-bottom: 1px solid black;
+}
+
+
+
+/*FOOTER*/
+
+
+.footer .texto-naranja{
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.footer h2{
+    color: white;
+    opacity: 0;
+    font-family: 'Oswald', sans-serif;
+    transition: .3s ease all;
+    position: relative;
+    z-index: 1;
+}
+
+.footer .redes-sociales{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+
+}
+
+.footer h2::after{
+    position: absolute;
+    content: '';
+    width: 60%;
+    height: 20px;
+    background-color: rgb(226, 1, 1);
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+
+.footer .redes-sociales a{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+.footer .fb i{color: #3b5998;}
+
+.footer .tw i{color: #1da1f2;}
+
+.footer .ig i{color: #c13584;}
+
+.footer .fb:hover {
+    background: #3b5998;
+    transition-duration: .3s;
+}
+
+.footer .tw:hover{
+    background: #1da1f2;
+    transition-duration: .3s;
+}
+
+.footer .ig:hover {
+    background: #c13584;
+    transition-duration: .3s;
+}
+
+.footer .fb:hover  i{
+color: white;}
+
+.footer .tw:hover  i{
+color: white;}
+
+.footer .ig:hover i {
+color: white;}
+
+.cp .titulo-final {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+
+@media screen and (max-width: 500px){
+    .nav .logo{
+        display: none;
+    }
+
+    .nav{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .paisajes article:nth-child(1) .modelo,
+    .paisajes article:nth-child(2) .modelo,
+    .paisajes article:nth-child(3) .modelo,
+    .paisajes article:nth-child(4) .modelo,
+    .paisajes article:nth-child(5) .modelo,
+    .paisajes article:nth-child(6) .modelo,
+    .paisajes article:nth-child(7) .modelo{
+        width: 80%;
+        display: inline-grid;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .footer .redes-sociales a{
+        width: 70px;
+        height: 70px;
+
+    }
+
+}
+
+@keyframes down-up{
+    0%{ transform: translateY(25px);}
+    25%{ transform: translateY(0px);}
+    100%{ transform: translateY();}
+}
